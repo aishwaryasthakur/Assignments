@@ -27,10 +27,11 @@ public class Application {
 		
 		productList = mgr.calculateDiscount(productList);
 		
-		for(int i=0; i<productList.length; i++)
-		{
-			System.out.println(productList[i].getProductName() + " : " + mgr.calculatedDiscountAmount(productList[i]));
-		}
+//		for(int i=0; i<productList.length; i++)
+//		{
+//			System.out.println(productList[i].getProductName() + " : " + mgr.calculatedDiscountAmount(productList[i]));
+//		}
 		
+		mgr.showProductsLegacy(productList);
 	}
 }

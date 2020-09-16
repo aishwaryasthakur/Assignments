@@ -1,6 +1,6 @@
 package com.training;
 
-public class Product {
+public class Product extends Object{
 	
 	private int productId;
 	private String productName;
@@ -80,7 +80,11 @@ public class Product {
 	public void setDiscount(double discount) {
 		this.discount = discount;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return this.getProductId() + " " + this.getProductName() + " " + this.getProductType() + " " + this.getRatePerUnit()
+		+ " " + this.getQuantity() + " " + this.getDiscount();
+	}	
 
 }

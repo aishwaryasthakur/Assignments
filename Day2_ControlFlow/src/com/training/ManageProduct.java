@@ -26,7 +26,7 @@ public class ManageProduct {
 		
 		for(int i=0; i<productList.length; i++)
 		{
-			System.out.println("Product " + i + "=>" + productList[i].getProductName());
+			System.out.println(productList[i].toString());
 		}
 	}
 	
