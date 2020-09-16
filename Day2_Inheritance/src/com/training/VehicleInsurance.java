@@ -37,18 +37,18 @@ public class VehicleInsurance extends Insurance{
 		
 		double premium = 0.0;
 		
-		if(this.getVehicleModel() == "Two Wheeler") {
+		if(this.getVehicleModel().equals("Two Wheeler")) {
 			
-			if(2020 - this.getYearOfManufature() < 2) {
+			if((2020 - this.getYearOfManufature()) < 2) {
 				premium = this.getCostOfvehicle() * 0.5;		
 			}
 			else {
 				premium = this.getCostOfvehicle() * 0.6;
 			}
 		}
-		else if(this.getVehicleModel() == "Four Wheeler") {
+		else if(this.getVehicleModel().equals("Four Wheeler")) {
 			
-			if(2020 - this.getYearOfManufature() < 2) {
+			if((2020 - this.getYearOfManufature()) < 2) {
 				premium = this.getCostOfvehicle() * 0.5;		
 			}
 			else {
