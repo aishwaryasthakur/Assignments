@@ -4,31 +4,33 @@ import com.training.ifaces.RentItems;
 
 public class Furniture implements RentItems {
 
+	private String itemName;
+	private double ratePerUnit;
 	private int quantity;
 	private int day;
 
-	
-	public Furniture() {
+	public Furniture(String itemName, double ratePerUnit, int quantity, int day) {
 		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public Furniture(int quantity, int day) {
-		super();
+		this.itemName = itemName;
+		this.ratePerUnit = ratePerUnit;
 		this.quantity = quantity;
 		this.day = day;
 	}
 
-	@Override
-	public String getitemName() {
-		// TODO Auto-generated method stub
-		return "Table";
+	public String getItemName() {
+		return itemName;
 	}
 
-	@Override
-	public double getratePerUnit() {
-		// TODO Auto-generated method stub
-		return 200.00;
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
+
+	public double getRatePerUnit() {
+		return ratePerUnit;
+	}
+
+	public void setRatePerUnit(double ratePerUnit) {
+		this.ratePerUnit = ratePerUnit;
 	}
 
 	public int getQuantity() {
@@ -50,7 +52,5 @@ public class Furniture implements RentItems {
 	@Override
 	public double calculateAmount() {
 		// TODO Auto-generated method stub
-		return this.getQuantity()* this.getDay() * this.getratePerUnit();
-	}
-
-}
+		return this.getQuantity()* this.getDay() * this.getRatePerUnit();
+	}}
