@@ -23,10 +23,8 @@ public class Application {
 				spring.setBookId(102);
 				spring.setBookName("spring");
 				spring.setAuthorName("WXY");
-				spring.setPrice(500);
+				spring.setPrice(700);
 				index = service.addBook(spring, index);
-				
-				Book book = service.getOne(11);
 				
 		} catch (MyCustomException e) {
 			// TODO Auto-generated catch block
@@ -35,9 +33,10 @@ public class Application {
 		
 		try {
 			Book book = service.getOne(101);
+			System.out.println(book.toString());
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
-			System.err.println("eNo such book");
+			System.out.println("No such book found");
 		}
 		
 		Book[] bookList = service.getAll();

@@ -20,7 +20,7 @@ public class BookService {
 				return bookList[i];
 			}
 		}
-		throw new NoSuchElementException("No such book found");
+		throw new NoSuchElementException();
 	}
 	
 	public Book[] getAll() {
